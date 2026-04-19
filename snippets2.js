@@ -2,7 +2,7 @@ let counterEmotes = 0;
 
 let instarr = [
    "streamer", "long", 'vip', "mod", "sub", 
-  "first","first","first", "resub"
+  "first","resub"
 ]
  let testarr = [
  "streamer", "vip", 'cheer', "follow", "sub", 
@@ -41,7 +41,7 @@ if (badges != "" && fieldData.badgesDisplay) {
 ${badges}</div>`;
    } else badges = ""
 
-    let element = $.parseHTML(`<div data-sender="${uid}" data-msgid="${msgId}" class="message-row ${msgId} ${userType}style ${specialclass} emt${emoteOnly}">
+    let element = $.parseHTML(`<div data-sender="${uid}" data-msgid="${msgId}" id="${msgId}" class="message-row ${userType}style ${specialclass} emt${emoteOnly}">
       <div class="anim msganim {msgAlign} {anim} ${smoothclass}">
         <div class="msgcont">
       <div class="namebox">
@@ -503,9 +503,10 @@ specialclass += " hasLeader"
 
   /* await */ addMessage(username, badges, message, data.userId, data.msgId, userType, emoteOnly, replyBody, subTierIndicator, extraDecor, specialclass);
   /*
-let currDiv = $(`.${data.msgId}`)
+
 if (data.tags.badges === "") {$(currDiv).find(".badgesbox").css("display", "none")}
 */
+let currDiv = $(`#${data.msgId}`)
 let pronounsText = "";
   let pronounsEl;
   if (fData.pronounsOn) {
