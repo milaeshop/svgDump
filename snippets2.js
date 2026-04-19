@@ -1,20 +1,5 @@
 let counterEmotes = 0;
 
-let instarr = [
-   "streamer", "long", 'vip', "mod", "sub", 
-  "first","resub"
-]
- let testarr = [
- "streamer", "vip", 'cheer', "follow", "sub", 
-  "first2", "first3", "streamer", "long", "vip", 
-  'mod', "sub", "first", "resub"
-]
-
-/*
-streamer, bot, long, vip, sub, subT2, subT3, mod, leadmod,
-first, first2, first3, artist, tip, resub, cheer, follow, 
-raid, high, pwr, veryFirst, newsub, giftsub, redeem, sesh
- */
 
 function addEventBlock(name, text, title) {
   return `<div class="alertcont">  
@@ -522,6 +507,7 @@ let pronounsText = "";
 
 
    async function onChatLoad(fData) {
+      console.log("load 1.1")
  if (fData.editsMode) {
     let queuearr = [];
     for (let i = 0; i < testarr.length; i++) {
