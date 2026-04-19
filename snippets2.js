@@ -2,7 +2,7 @@ let counterEmotes = 0;
 
 let instarr = [
    "streamer", "long", 'vip', "mod", "sub", 
-  "first", "resub"
+  "first","first","first", "resub"
 ]
  let testarr = [
  "streamer", "vip", 'cheer', "follow", "sub", 
