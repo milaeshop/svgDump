@@ -328,7 +328,9 @@ ${badges}</div>`;
 
    if (type !== "follower-latest") {
  blockToAdd = addEventBlock(alertName, alertText, title);
- }
+ } else {
+   blockToAdd = addFollowerBlock(alertName);
+   }
       if (!(alertText && blockToAdd)) return;
       totalMessages += 1;
     let alertMessage = $.parseHTML(`
